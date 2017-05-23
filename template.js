@@ -53,6 +53,7 @@ exports.template = function( grunt, init, done ) {
                 "grunt-contrib-compass": "^1.1.0",
                 "grunt-contrib-jshint": "^1.0.0",
                 "grunt-contrib-watch": "^1.0.0",
+                "grunt-sass-lint": "^0.2.2",
                 "grunt-text-replace": "^0.4.0",
                 "load-grunt-tasks": "^3.5.0"
             };

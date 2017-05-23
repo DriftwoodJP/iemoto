@@ -17,6 +17,12 @@ module.exports = function( grunt ) {
     },
 
     // compass(sass)
+    sasslint: {
+      options: {
+        configFile: '.sass-lint.yml',
+      },
+      target: ['sass/**/*.s+(a|c)ss']
+    },
     compass: {
       dev: {
         options: {
@@ -61,7 +67,7 @@ module.exports = function( grunt ) {
           'sass/{,*/}{,*/}*.scss',
           'js/{%= file_name %}.js'
         ],
-        tasks: ['jshint', 'compass', 'replace']
+        tasks: ['jshint', 'sasslint', 'compass', 'replace']
       }
     }
 
@@ -73,7 +79,7 @@ module.exports = function( grunt ) {
   // Default task.
   grunt.registerTask(
     'default',
-    ['jshint', 'compass', 'replace']
+    ['jshint', 'sasslint', 'compass', 'replace']
   );
 
   grunt.util.linefeed = '\n';
